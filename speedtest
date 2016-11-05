@@ -23,16 +23,17 @@
 #                   $ speedtest --log tmp.log  #  else default: speedtest.log
 #
 #    Dependencies:  curl [ Used to download the following Python script: ]
-#                   speedtest-cli.py ( https://github.com/sivel/speedtest-cli )
+#                   speedtest-cli.py ( https://github.com/jmcguirl/speedtest-cli )
 #                                 ^tested on Python versions 2.4 through 3.4. 
 
-#  CHANGE LOG  ORIGIN: https://github.com/rsvp/speedtest-linux 
+#  CHANGE LOG  ORIGIN: https://github.com/jmcguirl/speedtest-linux 
 #  2016-01-18  Fix issue #2 by using $HOME instead of /home/${USER} for logdir.
 #                 @oeolartep: $USER was unbound variable in cron jobs.
 #  2015-03-19  Second argument names log file. Directory's existence tested.
 #  2015-03-17  Clarify some comments.
 #  2015-03-13  This script ALWAYS retrieves the latest dependent code.
 #                 Currently it is version 0.3.2 from the primary source.
+#  2016-11-05  Modified to get use jmcguirl.github.com
 
 
 #           _____ PREAMBLE_v3: settings, variables, and error handling.
@@ -103,7 +104,7 @@ logf="$logdir/$arg2"
 
 #  Relying on a STATIC LOCAL VERSION may get outdated, so
 #  DOWNLOAD and execute LATEST PRIMARY VERSION of speedtest-cli.py:
-source='https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest_cli.py'
+source='https://raw.githubusercontent.com/jmcguirl/speedtest-cli/master/speedtest_cli.py'
 #  If @sivel disappears for any reason, try mirror @rsvp.
 #
 #  Retrieve source and place it in memory with execute permission:
